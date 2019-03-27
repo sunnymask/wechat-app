@@ -1,1 +1,25 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui"><meta name=screen-orientation content=portrait><meta name=apple-mobile-web-app-capable content=yes><meta name=format-detection content="telephone=no"><meta name=full-screen content=yes><meta name=x5-fullscreen content=true><title>任务中心</title><link href=./static/css/app.da95e9ced0c2b3c4b072e9d2e845968e.css rel=stylesheet></head><body><div id=app style="min-height: 100vh"></div><script src=https://cdn.bootcss.com/vue/2.4.4/vue.min.js></script><script src=https://cdn.bootcss.com/vue-router/2.7.0/vue-router.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/vuex/3.0.1/vuex.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js></script><script type=text/javascript src=./static/js/manifest.d5ac0ca7510276574264.js></script><script type=text/javascript src=./static/js/vendor.9b8757b3a686f6979e91.js></script><script type=text/javascript src=./static/js/app.332cac05518a4d73b035.js></script></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+<script type="text/javascript">
+var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
+function success(pos) {
+  var crd = pos.coords;
+  console.log(`经度：${crd.latitude}`);
+  console.log(`纬度：${crd.longitude}`);
+  console.log(`误差：${crd.accuracy} 米`);
+}
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+navigator.geolocation.getCurrentPosition(success, error, options);
+</script>
+</body>
+</html>
